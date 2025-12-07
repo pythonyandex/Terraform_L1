@@ -47,6 +47,8 @@
 Выполните команду ```terraform validate```. Объясните, в чём заключаются намеренно допущенные ошибки. Исправьте их.
 
    _Ресурс docker_image должен иметь имя, например - "nginx":_
+
+   
     resource "docker_image" "nginx" {
     name         = "nginx:latest"
     keep_locally = true
@@ -57,7 +59,8 @@
 8. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
 
     _Файл main.tf_: [main.tf](https://github.com/pythonyandex/Terraform_L1/blob/main/main.tf)
-_    Docker ps_:    ![docker ps](https://github.com/pythonyandex/Terraform_L1/blob/main/terraform_version.png)
+
+    _Docker ps_:    ![docker ps](https://github.com/pythonyandex/Terraform_L1/blob/main/terraform_version.png)
 
 
 10. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
